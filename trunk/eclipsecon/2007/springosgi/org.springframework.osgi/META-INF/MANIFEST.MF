@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.osgi
+Bundle-SymbolicName: org.springframework.osgi
+Bundle-Version: 1.0.0.SNAPSHOT-6128
+Bundle-ClassPath: spring-osgi-core-1.0-SNAPSHOT.jar
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.osgi.bundle.support;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.config;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.context;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.context.support;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.service;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.service.support;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.service.collection;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.osgi.service.support.cardinality;version="1.0.0.SNAPSHOT-6128"
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Created-By: Apache Maven
+Specification-Vendor: Spring Framework
+DynamicImport-Package: org.springframework.web.context;version="2.1.0",  org.springframework.web.context.support;version="2.1.0",  org.w3c.dom,  org.osgi.service.cm;version=1.2
+Build-Jdk: 1.5.0
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Built-By: hargrave
+Spring-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Vendor: Spring Framework
+Implementation-Title: Spring Framework
+Extension-Name: spring-osgi-core
+Import-Package: org.apache.commons.logging,
+ org.osgi.framework,
+ org.osgi.service.startlevel,
+ org.osgi.service.cm;version=1.2;resolution:=optional,
+ org.springframework.aop;version="2.1.0",
+ org.springframework.aop.framework;version="2.1.0",
+ org.springframework.aop.target;version="2.1.0",
+ org.springframework.aop.framework.adapter;version="2.1.0",
+ org.springframework.beans;version="2.1.0",
+ org.springframework.beans.factory;version="2.1.0",
+ org.springframework.beans.factory.config;version="2.1.0",
+ org.springframework.beans.factory.parsing;version="2.1.0",
+ org.springframework.beans.factory.support;version="2.1.0",
+ org.springframework.beans.factory.xml;version="2.1.0",
+ org.springframework.context;version="2.1.0",
+ org.springframework.context.event;version="2.1.0",
+ org.springframework.context.support;version="2.1.0",
+ org.springframework.core;version="2.1.0",
+ org.springframework.core.io;version="2.1.0",
+ org.springframework.core.io.support;version="2.1.0",
+ org.springframework.osgi.io;version="1.0.0.SNAPSHOT-6128",
+ org.springframework.util;version="2.1.0",
+ org.springframework.util.xml;version="2.1.0",
+ org.springframework.web.context;version="2.1.0";resolution:=optional,
+ org.springframework.web.context.support;version="2.1.0";resolution:=optional,
+ org.aopalliance.aop,
+ org.aopalliance.intercept

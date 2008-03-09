@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.osgi.io
+Bundle-SymbolicName: org.springframework.osgi.io
+Bundle-Version: 1.0.0.SNAPSHOT-6128
+Bundle-ClassPath: spring-osgi-io-1.0-SNAPSHOT.jar
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.osgi.io;version="1.0.0.SNAPSHOT-6128"
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+Build-Jdk: 1.5.0
+Import-Package: org.apache.commons.logging,  org.osgi.framework,  org.springframework.core;version="2.1.0",  org.springframework.core.io;version="2.1.0",  org.springframework.core.io.support;version="2.1.0",  org.springframework.util;version="2.1.0"
+Implementation-Version: 2.0.2
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Title: Spring Framework
+Implementation-Vendor: Spring Framework
+Bundle-DocURL: http://www.springframework.org/osgi
+Specification-Vendor: Spring Framework
+Extension-Name: spring-osgi-io
+Spring-Version: 2.0.2

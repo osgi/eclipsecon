@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.tigris.subversion.subclipse.core.svnnature">
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.struts,org.springframework.struts"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.remoting,org.springframework.remoting"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.eclipse.sudoku.application,org.eclipse.sudoku.application"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/SpringSupport,SpringSupport"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.eclipse.sudoku.ui,org.eclipse.sudoku.ui"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.jdbc,org.springframework.jdbc"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.mock,org.springframework.mock"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.jms,org.springframework.jms"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.eclipse.sudoku.factory.generator,org.eclipse.sudoku.factory.generator"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.jca,org.springframework.jca"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.toplink,org.springframework.toplink"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.support,org.springframework.support"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.osgi.extender,org.springframework.osgi.extender"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/com.koch.sudoku.base,com.koch.sudoku.base"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.context,org.springframework.context"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.hibernate3,org.springframework.hibernate3"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.osgi.io,org.springframework.osgi.io"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/log4j.properties,log4j.properties"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/Eclipse,Eclipse"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/2.hellospringworld,2.hellospringworld"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/0.Setup,0.Setup"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.hibernate2,org.springframework.hibernate2"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.jmx,org.springframework.jmx"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.jdo,org.springframework.jdo"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/4.helloconsumer,4.helloconsumer"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/3.helloservice,3.helloservice"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.core,org.springframework.core"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.webmvc,org.springframework.webmvc"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.web,org.springframework.web"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.osgi,org.springframework.osgi"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.eclipse.sudoku.core,org.eclipse.sudoku.core"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/1.helloworld,1.helloworld"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.ibatis,org.springframework.ibatis"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.jpa,org.springframework.jpa"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.aspects,org.springframework.aspects"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.beans,org.springframework.beans"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.portlet,org.springframework.portlet"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.eclipse.sudoku.solver.backtracing,org.eclipse.sudoku.solver.backtracking"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.aop,org.springframework.aop"/>
+<project reference="0.9.3,http://www2.osgi.org/svn/public/trunk/eclipsecon07.springosgi/org.springframework.dao,org.springframework.dao"/>
+</provider>
+</psf>

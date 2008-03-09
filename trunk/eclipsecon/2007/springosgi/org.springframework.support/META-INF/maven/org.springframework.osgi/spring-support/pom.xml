@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <parent>
+    <artifactId>spring-modules</artifactId>
+    <groupId>org.springframework.osgi</groupId>
+    <version>2.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.springframework.osgi</groupId>
+  <artifactId>spring-support</artifactId>
+  <packaging>osgi-bundle</packaging>
+  <name>Spring support module (OSGi version)</name>
+  <version>2.1-SNAPSHOT</version>
+  <description>The Spring-OSGi project makes it easy to build Spring applications
+  that run in an OSGi framework. A Spring application written in this
+  way provides better separation of modules, the ability to
+  dynamically add, remove, and update modules in a running system, the
+  ability to deploy multiple versions of a module simultaneously (and
+  have clients automatically bind to the appropriate one), and a dynamic
+  service model.</description>
+  <url>http://www.springframework.org</url>
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://opensource.atlassian.com/projects/spring/browse/OSGI</url>
+  </issueManagement>
+  <ciManagement>
+    <system>continuum</system>
+    <url>https://build.springframework.org/continuum/servlet/continuum</url>
+    <notifiers>
+      <notifier>
+        <configuration>
+          <address>adrian.colyer@interface21.com</address>
+        </configuration>
+      </notifier>
+      <notifier>
+        <configuration>
+          <address>costin.leau@interface21.com</address>
+        </configuration>
+      </notifier>
+    </notifiers>
+  </ciManagement>
+  <inceptionYear>2006</inceptionYear>
+  <developers>
+    <developer>
+      <id>adrian-colyer</id>
+      <name>Adrian Colyer</name>
+      <email>adrian.colyer at interface21.com</email>
+      <organization>Interface21</organization>
+      <organizationUrl>http://www.interface21.com</organizationUrl>
+      <roles>
+        <role>Project Admin</role>
+        <role>Developer</role>
+      </roles>
+      <timezone>0</timezone>
+    </developer>
+    <developer>
+      <id>costin_leau</id>
+      <name>Costin Leau</name>
+      <email>costin.leau at interface21.com</email>
+      <organization>Interface21</organization>
+      <organizationUrl>http://www.interface21.com</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+2</timezone>
+    </developer>
+    <developer>
+      <id>andypiper</id>
+      <name>Andy Piper</name>
+      <email>andy at bea.com</email>
+      <organization>BEA</organization>
+      <organizationUrl>http://www.bea.com</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>0</timezone>
+    </developer>
+    <developer>
+      <id>jconstantine</id>
+      <name>Hal Hildebrand</name>
+      <email>hal.hildebrand at oracle.com</email>
+      <organization>Oracle</organization>
+      <organizationUrl>http://www.oracle.com</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>-8</timezone>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <comments>Copyright 2006 the original author or authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied.
+See the License for the specific language governing permissions and
+limitations under the License.</comments>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:svn:https://svn.sourceforge.net/svnroot/springframework/spring-osgi/trunk/spring-modules/spring-support</connection>
+    <developerConnection>scm:svn:https://svn.sourceforge.net/svnroot/springframework/spring-osgi/trunk/spring-modules/spring-support</developerConnection>
+    <url>http://svn.sourceforge.net/viewcvs.cgi/springframework/spring-osgi/trunk/spring-modules/spring-support</url>
+  </scm>
+  <organization>
+    <name>Spring Framework</name>
+    <url>http://www.springframework.org</url>
+  </organization>
+  <build>
+    <sourceDirectory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\src\main\java</sourceDirectory>
+    <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\src\test\java</testSourceDirectory>
+    <outputDirectory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\target\classes</outputDirectory>
+    <testOutputDirectory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\target\test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <targetPath>../../META-INF</targetPath>
+        <filtering>true</filtering>
+        <directory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\src\main\resources\META-INF</directory>
+        <includes>
+          <include>MANIFEST.MF</include>
+        </includes>
+      </resource>
+      <resource>
+        <filtering>true</filtering>
+        <directory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\src\main\resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\src\test\resources</directory>
+      </testResource>
+    </testResources>
+    <directory>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support\target</directory>
+    <finalName>spring-support-2.1-SNAPSHOT</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix.plugins</groupId>
+        <artifactId>maven-osgi-plugin</artifactId>
+        <version>0.8.0-SNAPSHOT</version>
+        <extensions>true</extensions>
+        <configuration>
+          <manifestFile>META-INF/MANIFEST.MF</manifestFile>
+          <osgiManifest>
+            <bundleVendor>Spring Framework</bundleVendor>
+            <bundleDocUrl>http://www.springframework.org/osgi</bundleDocUrl>
+          </osgiManifest>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.3-20070114.205105-10</version>
+        <configuration>
+          <systemProperties>
+            <property>
+              <name>org.springframework.osgi.test.framework</name>
+              <value>equinox</value>
+            </property>
+            <property>
+              <name>net.sourceforge.cobertura.datafile</name>
+              <value>c:\home\hargrave\spring\spring-osgi\spring-modules\spring-support/target/cobertura/cobertura.ser</value>
+            </property>
+          </systemProperties>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.0.2</version>
+        <configuration>
+          <source>1.4</source>
+          <target>1.4</target>
+          <debug>true</debug>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.2-20070112.063452-32</version>
+        <configuration>
+          <descriptors>
+            <descriptor>src/assembly/bin.xml</descriptor>
+            <descriptor>src/assembly/target.xml</descriptor>
+          </descriptors>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.0.4-20070218.144642-1</version>
+        <configuration></configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.2-20061118.060301-1</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>META-INF</directory>
+              <includes>
+                <include>MANIFEST.MF</include>
+              </includes>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>dependency-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <id>unpack</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.springframework</groupId>
+                  <artifactId>spring-support</artifactId>
+                  <version>2.0.2</version>
+                  <type>jar</type>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${project.build.directory}/classes</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.3-20061118.060205-2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>2.2-20061118.060401-2</version>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <id>apache.m2.incubator</id>
+      <name>Apache M2 Incubator Repository</name>
+      <url>http://people.apache.org/repo/m2-incubating-repository/</url>
+    </repository>
+    <repository>
+      <id>eclipse-repository</id>
+      <name>Eclipse Repository</name>
+      <url>http://repo1.maven.org/eclipse/</url>
+    </repository>
+    <repository>
+      <snapshots />
+      <id>apache-snapshots</id>
+      <name>Apache Snapshots</name>
+      <url>http://cvs.apache.org/maven-snapshot-repository</url>
+    </repository>
+    <repository>
+      <id>safehaus-repository</id>
+      <name>Safehaus Repository</name>
+      <url>http://m2.safehaus.org</url>
+    </repository>
+    <repository>
+      <id>spring-ext</id>
+      <name>Spring External Dependencies Repository</name>
+      <url>https://svn.sourceforge.net/svnroot/springframework/repos/repo-ext/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots />
+      <id>apache.snapshots</id>
+      <name>Apache Snapshots</name>
+      <url>http://cvs.apache.org/maven-snapshot-repository/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <snapshots />
+      <id>codehaus-snapshot-repository</id>
+      <name>Codehaus Snapshots Repository</name>
+      <url>http://snapshots.repository.codehaus.org</url>
+    </pluginRepository>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Maven Plugin Repository</name>
+      <url>http://repo1.maven.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.osgi</groupId>
+      <artifactId>org.eclipse.osgi</artifactId>
+      <version>3.2.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <reporting>
+    <outputDirectory>target/site</outputDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <aggregate>true</aggregate>
+          <groups>
+            <group>
+              <title>Spring OSGi Core</title>
+              <packages>org.springframework.osgi*</packages>
+            </group>
+            <group>
+              <title>Spring OSGi JUnit Support</title>
+              <packages>org.springframework.osgi.test*</packages>
+            </group>
+            <group>
+              <title>Samples</title>
+              <packages>org.springframework.osgi.sample*</packages>
+            </group>
+          </groups>
+          <excludePackageNames>org.springframework.osgi.test.trivial*</excludePackageNames>
+          <links>
+            <link>http://java.sun.com/j2se/1.4.2/docs/api/</link>
+            <link>http://static.springframework.org/spring/docs/2.0.x/api/</link>
+          </links>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <configuration>
+          <aggregate>true</aggregate>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <inherited>true</inherited>
+        <reportSets>
+          <reportSet />
+        </reportSets>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <configuration>
+          <aggregate>true</aggregate>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+  <distributionManagement>
+    <repository>
+      <id>static.springframework.org</id>
+      <url>scp://static.springframework.org/var/www/domains/springframework.org/static/htdocs/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>static.springframework.org</id>
+      <url>scp://static.springframework.org/var/www/domains/springframework.org/static/htdocs/maven2-snapshots</url>
+    </snapshotRepository>
+    <site>
+      <id>static.springframework.org</id>
+      <name>SpringFramework.org</name>
+      <url>scp://static.springframework.org/var/www/domains/springframework.org/static/htdocs/maven2/spring-osgi/spring-modules/spring-support</url>
+    </site>
+  </distributionManagement>
+  <properties>
+    <osgi.test.platform>equinox</osgi.test.platform>
+    <spring.export.version>2.1.0.SNAPSHOT-202-2</spring.export.version>
+    <spring.import.version>2.1.0</spring.import.version>
+    <spring.osgi.bundle.version>1.0.0.SNAPSHOT-6128</spring.osgi.bundle.version>
+    <base.spring.version>2.0.2</base.spring.version>
+    <log4j.ignoreTCL>true</log4j.ignoreTCL>
+    <project.svn.revision>$Rev: 6172 $</project.svn.revision>
+    <spring.osgi.export.version>1.0.0.SNAPSHOT-6128</spring.osgi.export.version>
+    <spring.osgi.import.version>1.0.0.SNAPSHOT-6128</spring.osgi.import.version>
+    <spring.bundle.version>2.1.0.SNAPSHOT-202-2</spring.bundle.version>
+    <spring.version>2.0.2</spring.version>
+  </properties>
+</project>

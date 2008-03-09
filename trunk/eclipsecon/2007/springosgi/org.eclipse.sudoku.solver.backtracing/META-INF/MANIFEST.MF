@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sudoku Backtracking Solver Plug-in
+Bundle-SymbolicName: org.eclipse.sudoku.solver.backtracking;singleton:=true
+Bundle-Version: 1.0.0
+Import-Package: org.eclipse.core.runtime,
+ org.eclipse.sudoku.core.exceptions,
+ org.eclipse.sudoku.core.models,
+ org.eclipse.sudoku.core.solvers

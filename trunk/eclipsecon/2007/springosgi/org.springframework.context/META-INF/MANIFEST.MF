@@ -1,0 +1,51 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.context
+Bundle-SymbolicName: org.springframework.context
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-context-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.context;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.context.access;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.context.i18n;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.context.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.context.event;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.instrument.classloading;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jndi;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.stereotype;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.ui;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.ui.context;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.ui.context.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.validation;version="2.1.0.SNAPSHOT-202-2"
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Vendor: Spring Framework
+Build-Jdk: 1.5.0
+Import-Package: org.aopalliance.intercept;resolution:=optional,
+ org.apache.catalina.loader;resolution:=optional,
+ org.apache.commons.logging,
+ org.aspectj.weaver.loadtime;resolution:=optional,
+ org.springframework.aop;resolution:=optional;version="2.1.0",
+ org.springframework.aop.framework;resolution:=optional;version="2.1.0",
+ org.springframework.beans;version="2.1.0",
+ org.springframework.beans.factory;version="2.1.0",
+ org.springframework.beans.factory.access;version="2.1.0",
+ org.springframework.beans.factory.config;version="2.1.0",
+ org.springframework.beans.factory.support;version="2.1.0",
+ org.springframework.beans.factory.xml;version="2.1.0",
+ org.springframework.beans.propertyeditors;version="2.1.0",
+ org.springframework.beans.support;version="2.1.0",
+ org.springframework.core;version="2.1.0",
+ org.springframework.core.io;version="2.1.0",
+ org.springframework.core.io.support;version="2.1.0",
+ org.springframework.core.task;version="2.1.0",
+ org.springframework.util;version="2.1.0"
+Spring-Version: 2.0.2
+Specification-Vendor: Spring Framework
+Created-By: Apache Maven
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Title: Spring Framework
+Extension-Name: spring-context

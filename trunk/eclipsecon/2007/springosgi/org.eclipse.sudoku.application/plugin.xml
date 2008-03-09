@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="sudoku"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipse.sudoku.application.Sudoku">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="org.eclipse.sudoku.application.Perspective"
+            id="org.eclipse.sudoku.application.perspective">
+      </perspective>
+   </extension>
+ 
+   <extension
+         id="sudoku"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.sudoku.application.sudoku"
+            name="Sudoku"/>
+   </extension>
+
+</plugin>

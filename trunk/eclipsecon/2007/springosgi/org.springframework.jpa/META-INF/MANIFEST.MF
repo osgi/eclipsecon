@@ -1,0 +1,57 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.jpa
+Bundle-SymbolicName: org.springframework.jpa
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-jpa-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.orm.jpa;version="2.1.0.SNAPSHOT-202-2",  org.springframework.orm.jpa.support;version="2.1.0.SNAPSHOT-202-2",  org.springframework.orm.jpa.vendor;version="2.1.0.SNAPSHOT-202-2"
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Vendor: Spring Framework
+Build-Jdk: 1.5.0
+Import-Package: javax.persistence,
+ javax.persistence.spi,
+ javax.portlet;resolution:=optional,
+ javax.servlet;resolution:=optional,
+ javax.servlet.http;resolution:=optional,
+ oracle.toplink.essentials.ejb.cmp3;resolution:=optional,
+ oracle.toplink.essentials.internal.databaseaccess;resolution:=optional,
+ oracle.toplink.essentials.internal.sessions;resolution:=optional,
+ oracle.toplink.essentials.sessions;resolution:=optional,
+ oracle.toplink.essentials.expressions;resolution:=optional,
+ org.aopalliance.intercept,
+ org.apache.commons.logging,
+ org.hibernate;resolution:=optional,
+ org.hibernate.dialect;resolution:=optional,
+ org.hibernate.ejb;resolution:=optional,
+ org.springframework.beans;version="2.1.0",
+ org.springframework.beans.factory;version="2.1.0",
+ org.springframework.beans.factory.config;version="2.1.0",
+ org.springframework.context;version="2.1.0",
+ org.springframework.core.io;version="2.1.0",
+ org.springframework.core.io.support;version="2.1.0",
+ org.springframework.dao;version="2.1.0",
+ org.springframework.dao.support;version="2.1.0",
+ org.springframework.instrument.classloading;version="2.1.0",
+ org.springframework.jdbc.datasource;version="2.1.0",
+ org.springframework.jdbc.datasource.lookup;version="2.1.0",
+ org.springframework.orm;version="2.1.0",
+ org.springframework.transaction;version="2.1.0",
+ org.springframework.transaction.support;version="2.1.0",
+ org.springframework.util;version="2.1.0",
+ org.springframework.util.xml;version="2.1.0",
+ org.springframework.web.context;version="2.1.0";resolution:=optional,
+ org.springframework.web.context.support;version="2.1.0";resolution:=optional,
+ org.springframework.web.filter;version="2.1.0";resolution:=optional,
+ org.springframework.web.portlet.handler;version="2.1.0";resolution:=optional,
+ org.springframework.web.servlet.handler;version="2.1.0";resolution:=optional
+Spring-Version: 2.0.2
+Specification-Vendor: Spring Framework
+Created-By: Apache Maven
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Title: Spring Framework
+Extension-Name: spring-jpa
