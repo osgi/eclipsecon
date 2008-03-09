@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.polarion.team.svn.core.svnnature">
+<project reference="1.0.0,https://concierge.svn.sourceforge.net/svnroot/concierge/tags/Concierge/1.0_RC2/framework,ch.ethz.iks.concierge.framework,a0906deab1eb001c1328b5083e026853;https://concierge.svn.sourceforge.net/svnroot/concierge;https://concierge.svn.sourceforge.net/svnroot/concierge;branches;tags;trunk"/>
+<project reference="1.0.0,http://www.osgi.org/svn/public/trunk/eclipsecon/2008/androidosgi/bundles/helloworld,helloworld,b0c86a6a72ed001c1f86aa2b3f7554cb;http://www.osgi.org/svn/public;http://www.osgi.org/svn/public;branches;tags;trunk"/>
+<project reference="1.0.0,http://www.osgi.org/svn/public/trunk/osgi.companion,osgi.companion,b0c86a6a72ed001c1f86aa2b3f7554cb;http://www.osgi.org/svn/public;http://www.osgi.org/svn/public;branches;tags;trunk"/>
+</provider>
+<provider id="org.eclipse.team.cvs.core.cvsnature">
+<project reference="1.0,:pserver:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.osgi,org.eclipse.osgi,R33x_v20080105"/>
+</provider>
+</psf>
