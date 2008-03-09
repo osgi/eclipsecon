@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Chat Library
+Bundle-SymbolicName: aQute.chat
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Import-Package: org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker
+Export-Package: aQute.chat,
+ aQute.service.channel

@@ -1,0 +1,66 @@
+1. There is no possibility to add bundles (jars) that are part of 
+   the target but you do not want to install them as a source project.
+   Think JARS!
+   
+2. Updating a bundle installed by reference gives an exception
+org.osgi.framework.BundleException: "initial@reference:file:../../../cvs/tutorial/helloworld/" is an invalid URL
+	at org.eclipse.osgi.framework.adaptor.core.AbstractFrameworkAdaptor.mapLocationToURLConnection(AbstractFrameworkAdaptor.java:299)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle$2.run(AbstractBundle.java:594)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.updateWorker(AbstractBundle.java:663)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.update(AbstractBundle.java:583)
+	at org.eclipse.osgi.framework.internal.core.FrameworkCommandProvider._update(FrameworkCommandProvider.java:350)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.osgi.framework.internal.core.FrameworkCommandInterpreter.execute(FrameworkCommandInterpreter.java:145)
+	at org.eclipse.osgi.framework.internal.core.FrameworkConsole.docommand(FrameworkConsole.java:293)
+	at org.eclipse.osgi.framework.internal.core.FrameworkConsole.console(FrameworkConsole.java:278)
+	at org.eclipse.osgi.framework.internal.core.FrameworkConsole.run(FrameworkConsole.java:213)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.MalformedURLException: no protocol: initial@reference:file:../../../cvs/tutorial/helloworld/
+	at java.net.URL.<init>(Unknown Source)
+	at java.net.URL.<init>(Unknown Source)
+	at java.net.URL.<init>(Unknown Source)
+	at org.eclipse.osgi.framework.adaptor.core.AbstractFrameworkAdaptor.mapLocationToURLConnection(AbstractFrameworkAdaptor.java:297)
+	
+3. Stopping and starting does not seem to pick up changes in the manifest
+
+4. The SCR could not find a helloworld/component.xml file after the bundle was started. 
+   Starting/Stopping did not help
+   
+5. I added a new plugin after I already launched a configuration. This plugin does
+   not show up in my Run/Debug configuration. How do I add it? It did, but it showed the bundle
+   symbolic name.
+   
+6. There are too many modal dialog windows. For example, if you add a class you might have to add an
+   import package. Now you have to close the Add Class dialog, import the package and then
+   add the class again.
+   
+7. Sometimes an import-package is not recognized when added to the dependencies (even
+   after saving). Requiring the bundle, and then removing this require suddenly makes it see
+   the import-package.
+   
+8. The plugin dependencies do not show package dependencies but only require-bundle
+   dependencies
+   
+9. You can only define one global target environment
+
+10. It is not clear where the bundles go in a new target environment: in the plugins 
+    directory and NOT the bundles dir.
+    
+11. The target seems to be a repo of bundles AND parameters for a launch. I think they should
+    be separated.
+
+12. It is not clear how link the sources for dynamic dependencies
+
+13. When you run "unused dependencies" it can say org.osgi.framework is not used while
+    the code has methods that reference it, e.g.
+      foo( componentContext.getBundleContext()) 
+    This code does not cause the detection on BundleContext. I had a similar problem
+    with Btool :-)
+    
+   
+
+
