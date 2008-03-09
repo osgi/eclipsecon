@@ -1,0 +1,4 @@
+#!/bin/sh -x
+dx --dex --output=classes.dex "$1"
+aapt add "$1" classes.dex
+rm classes.dex
