@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.jca
+Bundle-SymbolicName: org.springframework.jca
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-jca-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.jca.cci;version="2.1.0.SNAPSHOT-202-2",  org.springframework.jca.cci.connection;version="2.1.0.SNAPSHOT-202-2",  org.springframework.jca.cci.core;version="2.1.0.SNAPSHOT-202-2",  org.springframework.jca.cci.core.support;version="2.1.0.SNAPSHOT-202-2",  org.springframework.jca.cci.object;version="2.1.0.SNAPSHOT-202-2",  org.springframework.jca.support;version="2.1.0.SNAPSHOT-202-2"
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Vendor: Spring Framework
+Build-Jdk: 1.5.0
+Import-Package: javax.resource,  javax.resource.cci,  javax.resource.spi,  org.apache.commons.logging,  org.springframework.beans.factory;version="2.1.0",  org.springframework.dao;version="2.1.0",  org.springframework.dao.support;version="2.1.0",  org.springframework.transaction;version="2.1.0",  org.springframework.transaction.support;version="2.1.0",  org.springframework.util;version="2.1.0"
+Spring-Version: 2.0.2
+Specification-Vendor: Spring Framework
+Created-By: Apache Maven
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Title: Spring Framework
+Extension-Name: spring-jca

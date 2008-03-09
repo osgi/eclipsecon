@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.jms
+Bundle-SymbolicName: org.springframework.jms
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-jms-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.jms;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.connection;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.core;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.core.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.listener;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.listener.adapter;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.listener.serversession;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.support.converter;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.jms.support.destination;version="2.1.0.SNAPSHOT-202-2"
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Vendor: Spring Framework
+Build-Jdk: 1.5.0
+Import-Package: javax.jms,
+ org.apache.commons.logging,
+ org.apache.commons.pool,
+ org.apache.commons.pool.impl,
+ org.springframework.beans.factory;version="2.1.0",
+ org.springframework.context;version="2.1.0",
+ org.springframework.core;version="2.1.0",
+ org.springframework.core.task;version="2.1.0",
+ org.springframework.jndi;version="2.1.0",
+ org.springframework.scheduling;version="2.1.0",
+ org.springframework.scheduling.timer;version="2.1.0",
+ org.springframework.transaction;version="2.1.0",
+ org.springframework.transaction.support;version="2.1.0",
+ org.springframework.util;version="2.1.0"
+Spring-Version: 2.0.2
+Specification-Vendor: Spring Framework
+Created-By: Apache Maven
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Title: Spring Framework
+Extension-Name: spring-jms

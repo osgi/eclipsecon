@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hello Spring World
+Bundle-SymbolicName: hellospringworld
+Bundle-Version: 1.0.0

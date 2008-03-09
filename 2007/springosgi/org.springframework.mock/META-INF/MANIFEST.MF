@@ -1,0 +1,52 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.mock
+Bundle-SymbolicName: org.springframework.mock
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-mock-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.mock.jndi, org.springframework.mock.web, org.springframework.mock.web.portlet, org.springframework.test, org.springframework.test.web, org.springframework.test.annotation, org.springframework.test.jpa
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Vendor: Spring Framework
+Build-Jdk: 1.5.0
+Import-Package: javax.naming;resolution:=optional,
+ javax.naming.spi;resolution:=optional,
+ javax.servlet;resolution:=optional,
+ javax.servlet.jsp;resolution:=optional,
+ javax.servlet.jsp.el;resolution:=optional,
+ javax.servlet.http;resolution:=optional,
+ javax.portlet;resolution:=optional,
+ javax.sql;resolution:=optional,
+ javax.persistence;resolution:=optional,
+ org.apache.taglibs.standard.lang.support;resolution:=optional,
+ org.springframework.jndi;resolution:=optional,
+ org.springframework.util,
+ org.springframework.web.util;resolution:=optional,
+ org.springframework.core,
+ org.springframework.core.io,
+ org.springframework.beans,
+ org.springframework.beans.factory,
+ org.springframework.beans.factory.config,
+ org.springframework.beans.factory.support,
+ org.springframework.beans.factory.xml,
+ org.springframework.context,
+ org.springframework.dao;resolution:=optional,
+ org.springframework.jdbc.core;resolution:=optional,
+ org.springframework.transaction;resolution:=optional,
+ org.springframework.transaction.support;resolution:=optional,
+ org.springframework.orm.jpa;resolution:=optional,
+ org.springframework.jdbc.core.simple;resolution:=optional,
+ org.aspectj.weaver.loadtime;resolution:=optional,
+ org.springframework.instrument.classloading;resolution:=optional,
+ org.apache.commons.logging,
+ junit.framework
+Spring-Version: 2.0.2
+Specification-Vendor: Spring Framework
+Created-By: Apache Maven
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Title: Spring Framework
+Extension-Name: spring-mock

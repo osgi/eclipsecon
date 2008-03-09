@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:osgi="http://www.springframework.org/schema/osgi"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+ <bean name="game" class="org.eclipse.sudoku.core.SudokuCoreActivator"
+  		factory-method="getGame">
+  		<property name="boardSolvers" ref="solverServices"/>
+  		<property name="boardFactories" ref="factoryServices"/>
+ </bean> 		
+ <osgi:reference id="solverServices"
+ 	 interface="org.eclipse.sudoku.core.solvers.SudokuBoardSolver"
+ 	 cardinality="0..n"/>
+ <osgi:reference id="factoryServices"
+ 	 interface="org.eclipse.sudoku.core.factories.SudokuBoardFactory"
+ 	 cardinality="0..n"/>
+
+</beans>

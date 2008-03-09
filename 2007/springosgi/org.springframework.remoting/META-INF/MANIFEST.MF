@@ -1,0 +1,64 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.remoting
+Bundle-SymbolicName: org.springframework.remoting
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-remoting-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.remoting;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.remoting.caucho;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.remoting.httpinvoker;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.remoting.jaxrpc;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.remoting.jaxrpc.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.remoting.rmi;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.remoting.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.ejb.access;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.ejb.config;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.ejb.support;version="2.1.0.SNAPSHOT-202-2"
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+Implementation-Vendor: Spring Framework
+Build-Jdk: 1.5.0
+Import-Package: com.caucho.burlap.client;resolution:=optional,
+ com.caucho.burlap.io;resolution:=optional,
+ com.caucho.burlap.server;resolution:=optional,
+ com.caucho.hessian.client;resolution:=optional,
+ com.caucho.hessian.io;resolution:=optional,
+ com.caucho.hessian.server;resolution:=optional,
+ javax.ejb;resolution:=optional,
+ javax.jms;resolution:=optional,
+ javax.servlet;resolution:=optional,
+ javax.servlet.http;resolution:=optional,
+ org.aopalliance.aop,
+ org.aopalliance.intercept,
+ org.apache.axis.encoding.ser;resolution:=optional,
+ org.apache.commons.httpclient;resolution:=optional,
+ org.apache.commons.httpclient.methods;resolution:=optional,
+ org.apache.commons.logging,
+ org.springframework.aop.framework;version="2.1.0",
+ org.springframework.aop.support;version="2.1.0",
+ org.springframework.beans;version="2.1.0",
+ org.springframework.beans.factory;version="2.1.0",
+ org.springframework.beans.factory.access;version="2.1.0",
+ org.springframework.beans.factory.support;version="2.1.0",
+ org.springframework.beans.factory.xml;version="2.1.0",
+ org.springframework.context;version="2.1.0",
+ org.springframework.context.access;version="2.1.0",
+ org.springframework.context.support;version="2.1.0",
+ org.springframework.core;version="2.1.0",
+ org.springframework.jndi;version="2.1.0",
+ org.springframework.util;version="2.1.0",
+ org.springframework.util.xml;version="2.1.0",
+ org.springframework.web;version="2.1.0";resolution:=optional,
+ org.springframework.web.context;version="2.1.0";resolution:=optional,
+ org.springframework.web.context.support;version="2.1.0";resolution:=optional,
+ org.springframework.web.util;version="2.1.0";resolution:=optional
+Spring-Version: 2.0.2
+Specification-Vendor: Spring Framework
+Created-By: Apache Maven
+Bundle-DocURL: http://www.springframework.org/osgi
+Implementation-Version: 2.0.2
+Archiver-Version: Plexus Archiver
+Implementation-Title: Spring Framework
+Extension-Name: spring-remoting

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="%category.name"
+            id="org.eclipse.sudoku.ui">
+      </category>
+      <view
+            name="%view.name"
+            icon="icons/sudokuMain.gif"
+            category="org.eclipse.sudoku.ui"
+            class="org.eclipse.sudoku.ui.views.SudokuView"
+            id="org.eclipse.sudoku.ui.views.SudokuView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSetPartAssociations">
+      <actionSetPartAssociation targetID="org.eclipse.sudoku.ui.actionSet">
+         <part id="org.eclipse.sudoku.ui.views.SudokuView"/>
+      </actionSetPartAssociation>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.eclipse.sudoku.ui.actionSet"
+            label="%actionSet.label">
+         <action
+               class="org.eclipse.sudoku.ui.actions.ClearBoardAction"
+               icon="icons/sudokuClearPuzzle.gif"
+               id="org.eclipse.sudoku.ui.ClearBoardAction"
+               label="%action.clearpuzzle.label"
+               menubarPath="sudoku.menu/additions"
+               toolbarPath="additions"
+               tooltip="%action.clearpuzzle.tooltip"/>
+         <action
+               class="org.eclipse.sudoku.ui.actions.NewBoardAction"
+               icon="icons/sudokuNewPuzzle.gif"
+               id="org.eclipse.sudoku.ui.CreateAction"
+               label="%action.newpuzzle.label"
+               menubarPath="sudoku.menu/additions"
+               style="pulldown"
+               toolbarPath="additions"
+               tooltip="%action.newpuzzle.tooltip"/>
+         <action
+               class="org.eclipse.sudoku.ui.actions.SolveBoardAction"
+               icon="icons/sudokuSolvePuzzle.gif"
+               id="org.eclipse.sudoku.ui.SolveAction"
+               label="%action.solvepuzzle.label"
+               menubarPath="sudoku.menu/additions"
+               style="pulldown"
+               toolbarPath="additions"
+               tooltip="%action.solvepuzzle.tooltip"/>
+      </actionSet>
+   </extension>
+
+</plugin>

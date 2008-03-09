@@ -1,0 +1,59 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.springframework.aop
+Bundle-SymbolicName: org.springframework.aop
+Bundle-Version: 2.1.0.SNAPSHOT-202-2
+Bundle-ClassPath: spring-aop-2.1-SNAPSHOT.jar,
+ target/classes/
+Bundle-Vendor: Spring Framework
+Export-Package: org.springframework.aop;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.aop.config;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.aop.framework;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.aop.support;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.aop.framework.adapter;version=2.1.0.SNAPSHOT-202-2,
+ org.springframework.aop.target;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.aop.target.dynamic;version="2.1.0.SNAPSHOT-202-2",
+ org.springframework.metadata;version="2.1.0.SNAPSHOT-202-2"
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+Build-Jdk: 1.5.0
+Import-Package: com.jamonapi;resolution:=optional,
+ net.sf.cglib.core;resolution:=optional,
+ net.sf.cglib.proxy;resolution:=optional,
+ net.sf.cglib.reflect;resolution:=optional,
+ net.sf.cglib.transform.impl;resolution:=optional,
+ org.apache.commons.attributes;resolution:=optional,
+ org.apache.commons.logging,
+ org.apache.commons.pool;resolution:=optional,
+ org.apache.commons.pool.impl;resolution:=optional,
+ org.apache.oro.text.regex;resolution:=optional,
+ org.aspectj.bridge;resolution:=optional,
+ org.aspectj.lang;resolution:=optional,
+ org.aspectj.lang.annotation;resolution:=optional,
+ org.aspectj.lang.reflect;resolution:=optional,
+ org.aspectj.runtime.internal;resolution:=optional,
+ org.aspectj.util;resolution:=optional,
+ org.aspectj.weaver.tools;resolution:=optional,
+ org.springframework.beans;version="2.1.0",
+ org.springframework.beans.factory;version="2.1.0",
+ org.springframework.beans.factory.config;version="2.1.0",
+ org.springframework.beans.factory.parsing;version="2.1.0",
+ org.springframework.beans.factory.support;version="2.1.0",
+ org.springframework.beans.factory.xml;version="2.1.0",
+ org.springframework.core;version="2.1.0",
+ org.springframework.core.annotation;version="2.1.0",
+ org.springframework.core.io;version="2.1.0",
+ org.springframework.util;version="2.1.0",
+ org.springframework.util.xml;version="2.1.0",
+ org.aopalliance.aop,
+ org.aopalliance.intercept
+Implementation-Version: 2.0.2
+Built-By: hargrave
+Specification-Title: The Spring-OSGi project makes it easy to build Spring applications that run in an OSGi framework. A Spring application written in this way provides better separation of modules, the ability to dynamically add, remove, and update modules in a running system, the ability to deploy multiple versions of a module simultaneously (and have clients automatically bind to the appropriate one), and a dynamic service model.
+DynamicImport-Package: *
+Implementation-Title: Spring Framework
+Implementation-Vendor: Spring Framework
+Bundle-DocURL: http://www.springframework.org/osgi
+Specification-Vendor: Spring Framework
+Extension-Name: spring-aop
+Spring-Version: 2.0.2

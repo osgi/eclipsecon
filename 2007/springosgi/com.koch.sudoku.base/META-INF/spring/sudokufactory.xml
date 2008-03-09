@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:osgi="http://www.springframework.org/schema/osgi"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+ <bean name="factory" class="com.koch.sudoku.KochSudokuBoardFactory"
+  		lazy-init="true">
+  		<property name="name" value="George Koch&apos;s Sudoku Puzzle Factory"/>
+ </bean>
+  		
+ <osgi:service id="factoryService" ref="factory"
+    interface="org.eclipse.sudoku.core.factories.SudokuBoardFactory"
+    lazy-init="true">
+  </osgi:service>
+
+</beans>
