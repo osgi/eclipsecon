@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Telnetchat Plug-in
+Bundle-SymbolicName: aQute.telnetchat
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Service-Component: OSGI-INF/component.xml
+Import-Package: aQute.chat,
+ aQute.service.channel,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component,
+ org.osgi.service.log

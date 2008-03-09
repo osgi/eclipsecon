@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Swtchat Plug-in
+Bundle-SymbolicName: aQute.swtchat
+Bundle-Version: 1.0.0
+Service-Component: OSGI-INF/component.xml
+Bundle-Localization: plugin
+Import-Package: aQute.chat,
+ aQute.service.channel,
+ org.eclipse.swt,
+ org.eclipse.swt.events,
+ org.eclipse.swt.layout,
+ org.eclipse.swt.widgets,
+ org.osgi.framework,
+ org.osgi.service.component
