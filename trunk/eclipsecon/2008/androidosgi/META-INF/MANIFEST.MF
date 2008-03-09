@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: androidosgi
+Bundle-SymbolicName: androidosgi
+Bundle-Version: 1.0.0

@@ -1,0 +1,188 @@
+Index: META-INF/MANIFEST.MF
+===================================================================
+--- META-INF/MANIFEST.MF	(revision 0)
++++ META-INF/MANIFEST.MF	(revision 0)
+@@ -0,0 +1,13 @@
++Manifest-Version: 1.0
++Export-Package: org.osgi.framework;specification-version=1.2, org.osgi
++ .service.log;specification-version=1.2, org.osgi.service.packageadmin
++ ;specification-version=1.1; org.osgi.service.startlevel:specification
++ -version=1.0
++Bundle-SymbolicName: ch.ethz.iks.concierge.framework
++Bundle-Version: 1.0.2.RC2
++Bundle-Name: Concierge Framework
++Main-Class: ch.ethz.iks.concierge.framework.Framework
++PproApp-Name: Concierge
++PproApp-Vendor: Jan S. Rellermeyer, IKS, ETH Zurich
++PproApp-Version: 1.0
++
+Index: .classpath
+===================================================================
+--- .classpath	(revision 0)
++++ .classpath	(revision 0)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" path="src/main/java"/>
++	<classpathentry kind="con" path="com.android.ide.eclipse.adt.project.AndroidClasspathContainerInitializer"/>
++	<classpathentry kind="output" path="bin"/>
++</classpath>
+Index: .project
+===================================================================
+--- .project	(revision 0)
++++ .project	(revision 0)
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>ch.ethz.iks.concierge.framework</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.pde.ManifestBuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.pde.SchemaBuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++		<nature>org.eclipse.pde.PluginNature</nature>
++	</natures>
++</projectDescription>
+Index: src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java
+===================================================================
+--- src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java	(revision 0)
++++ src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java	(revision 0)
+@@ -0,0 +1,31 @@
++package ch.ethz.iks.concierge.framework;
++
++import java.io.File;
++
++import android.dalvik.DexFile;
++
++class DexHelper {
++	private final DexFile df;
++	
++	DexHelper(File file) throws Exception {
++		System.out.println("DexHelper.<init>(" + file + ")"); //$NON-NLS-1$ //$NON-NLS-2$
++		df = new DexFile(file);
++		System.out.println("DexHelper.<init>(" + file + ") created DexFile "+ df); //$NON-NLS-1$ //$NON-NLS-2$
++	}
++
++	Class defineClass(ClassLoader cl, String name) {
++		String dexName = name.replace('.', '/');
++		System.out.println("DexHelper.defineClass(" + dexName + ") from DexFile "+ df); //$NON-NLS-1$ //$NON-NLS-2$
++		try {
++			Class c = df.loadClass(dexName, cl);
++			System.out.println("DexHelper.defineClass(" + dexName + ") defined "+ c); //$NON-NLS-1$ //$NON-NLS-2$
++			return c;
++		}
++		catch (Exception e) {
++			System.out.println("DexHelper.defineClass(" + dexName + ") failed."); //$NON-NLS-1$ //$NON-NLS-2$
++			e.printStackTrace(System.out);
++			return null;
++		}
++	}
++
++}
+Index: src/main/java/ch/ethz/iks/concierge/framework/BundleClassLoader.java
+===================================================================
+--- src/main/java/ch/ethz/iks/concierge/framework/BundleClassLoader.java	(revision 204)
++++ src/main/java/ch/ethz/iks/concierge/framework/BundleClassLoader.java	(working copy)
+@@ -155,6 +155,8 @@
+ 	 */
+ 	private static final Vector EMPTY_VECTOR = new Vector(0);
+ 
++	final DexHelper dexHelper;
++
+ 	/**
+ 	 * create a new bundle classloader.
+ 	 * 
+@@ -174,6 +176,7 @@
+ 		try {
+ 			// write the JAR file to the storage
+ 			File file = new File(storageLocation, BUNDLE_FILE_NAME);
++			DexHelper dh = null;
+ 			storeFile(file, stream);
+ 
+ 			// and open a JarFile
+@@ -202,8 +205,14 @@
+ 				new File(jar.getName()).delete();
+ 				jarFile = null;
+ 			} else {
++				try {
++					dh = new DexHelper(file);
++				}
++				catch (Throwable e) {
++				}
+ 				jarFile = jar;
+ 			}
++			dexHelper = dh;
+ 		} catch (IOException ioe) {
+ 			ioe.printStackTrace();
+ 			Framework.deleteDirectory(new File(storageLocation));
+@@ -227,9 +236,15 @@
+ 		this.bundle = bundle;
+ 
+ 		File file = new File(storageLocation, BUNDLE_FILE_NAME);
++		DexHelper dh = null;
+ 
+ 		try {
+ 			if (file.exists()) {
++				try {
++					dh = new DexHelper(file);
++				}
++				catch (Throwable e) {
++				}
+ 				jarFile = new JarFile(file);
+ 				processManifest(jarFile.getManifest());
+ 			} else {
+@@ -240,6 +255,7 @@
+ 						+ File.separatorChar + "MANIFEST.MF")));
+ 				processManifest(mf);
+ 			}
++			dexHelper = dh;
+ 		} catch (IOException ioe) {
+ 			ioe.printStackTrace();
+ 			throw new BundleException("Could not restore bundle: "
+@@ -447,7 +463,7 @@
+ 		if (activatorClassName != null) {
+ 			try {
+ 				// resolve activator, if there is one declared in the manifest
+-				final Class activatorClass = loadClass(activatorClassName, true);
++				final Class activatorClass = loadClass(activatorClassName);
+ 
+ 				if (activatorClass == null) {
+ 					if (critical) {
+@@ -617,6 +633,9 @@
+ 				if (input == null) {
+ 					continue;
+ 				}
++				if (dexHelper != null) {
++					return dexHelper.defineClass(this, classname);
++				}
+ 				try {
+ 					int len;
+ 					final ByteArrayOutputStream out = new ByteArrayOutputStream();
+Index: build.properties
+===================================================================
+--- build.properties	(revision 0)
++++ build.properties	(revision 0)
+@@ -0,0 +1,6 @@
++bin.includes = .,\
++               META-INF/
++source.. = src/main/java
++output.. = bin/
++jre.compilation.profile = J2SE-1.4
++jars.extra.classpath = platform:/plugin/androidosgi/android.jar
