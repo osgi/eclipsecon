@@ -1,4 +1,7 @@
 #!/bin/sh -x
+# © Copyright 2008 IBM Corp.  All rights reserved.  
+# This source code is made available under the terms of the Eclipse Public License, v1.0. 
+
 dx --dex --output=classes.dex "$1"
 aapt add "$1" classes.dex
 rm classes.dex
