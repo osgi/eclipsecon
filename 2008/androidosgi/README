@@ -18,3 +18,6 @@ running on Dalvik.
 The scripts folder contains some useful scripts. The dexit shell script will 
 "dexify" a jar file. This is how the framework jars and the bundle jars were
 processed to be loaded on Dalvik. 
+
+The docs folder hold some documentation. The projectSet.psf file can be used to
+check out some of the other Eclipse projects used.
