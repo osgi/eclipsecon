@@ -64,10 +64,12 @@ Index: src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java
 ===================================================================
 --- src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java	(revision 0)
 +++ src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java	(revision 0)
-@@ -0,0 +1,31 @@
+@@ -0,0 +1,50 @@
 +package ch.ethz.iks.concierge.framework;
 +
 +import java.io.File;
++
++import org.osgi.service.log.LogService;
 +
 +import android.dalvik.DexFile;
 +
@@ -75,21 +77,38 @@ Index: src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java
 +	private final DexFile df;
 +	
 +	DexHelper(File file) throws Exception {
-+		System.out.println("DexHelper.<init>(" + file + ")"); //$NON-NLS-1$ //$NON-NLS-2$
++		if (Framework.DEBUG_CLASSLOADING) {
++			Framework.logger.log(LogService.LOG_INFO,
++					"DexHelper.<init>(" + file + ")"); //$NON-NLS-1$ //$NON-NLS-2$
++		}
++
 +		df = new DexFile(file);
-+		System.out.println("DexHelper.<init>(" + file + ") created DexFile "+ df); //$NON-NLS-1$ //$NON-NLS-2$
++		if (Framework.DEBUG_CLASSLOADING) {
++			Framework.logger.log(LogService.LOG_INFO,
++					"DexHelper.<init>(" + file + ") created DexFile "+ df); //$NON-NLS-1$ //$NON-NLS-2$
++		}
 +	}
 +
 +	Class defineClass(ClassLoader cl, String name) {
 +		String dexName = name.replace('.', '/');
-+		System.out.println("DexHelper.defineClass(" + dexName + ") from DexFile "+ df); //$NON-NLS-1$ //$NON-NLS-2$
++		if (Framework.DEBUG_CLASSLOADING) {
++			Framework.logger.log(LogService.LOG_INFO,
++					"DexHelper.defineClass(" + dexName + ") from DexFile "+ df); //$NON-NLS-1$ //$NON-NLS-2$
++		}
++		
 +		try {
 +			Class c = df.loadClass(dexName, cl);
-+			System.out.println("DexHelper.defineClass(" + dexName + ") defined "+ c); //$NON-NLS-1$ //$NON-NLS-2$
++			if (Framework.DEBUG_CLASSLOADING) {
++				Framework.logger.log(LogService.LOG_INFO,
++						"DexHelper.defineClass(" + dexName + ") defined "+ c); //$NON-NLS-1$ //$NON-NLS-2$
++			}
 +			return c;
 +		}
 +		catch (Exception e) {
-+			System.out.println("DexHelper.defineClass(" + dexName + ") failed."); //$NON-NLS-1$ //$NON-NLS-2$
++			if (Framework.DEBUG_CLASSLOADING) {
++				Framework.logger.log(LogService.LOG_INFO,
++						"DexHelper.defineClass(" + dexName + ") failed."); //$NON-NLS-1$ //$NON-NLS-2$
++			}
 +			e.printStackTrace(System.out);
 +			return null;
 +		}
