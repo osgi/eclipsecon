@@ -1,0 +1,20 @@
+This folder contains material related to the 2008 EclipseCon presentation:
+
+380 -  Android and OSGi: Can they work together?
+
+The bundles folder holds the Eclipse projects for some sample bundles.
+
+The data folder hold files ready to upload to the Android SDK emulator. Once the
+emulator is running and you have the Android SDK tools directory on your path,
+change to the data folder and run the upload shell script.
+
+The japi folder contains the japitools output from analyzing how the Dalvik
+java class librarys conform to the published OSGi Execution Environments.
+
+The patch folder contains 2 patches showing the code modifications made to Equinox
+and Concierge frameworks to enable them to load java classes from bundles when 
+running on Dalvik.
+
+The scripts folder contains some useful scripts. The dexit shell script will 
+"dexify" a jar file. This is how the framework jars and the bundle jars were
+processed to be loaded on Dalvik. 
