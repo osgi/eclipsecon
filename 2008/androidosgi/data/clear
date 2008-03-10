@@ -1,0 +1,2 @@
+#!/bin/sh -x
+find * -maxdepth 0 -type d -exec adb shell rm -r /data/'{}' ';'
