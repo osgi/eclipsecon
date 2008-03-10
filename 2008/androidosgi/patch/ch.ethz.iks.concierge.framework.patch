@@ -64,7 +64,11 @@ Index: src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java
 ===================================================================
 --- src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java	(revision 0)
 +++ src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java	(revision 0)
-@@ -0,0 +1,50 @@
+@@ -0,0 +1,54 @@
++/* 
++ * © Copyright 2008 IBM Corp.  All rights reserved.  
++ * This source code is made available under the terms of the Eclipse Public License, v1.0. 
++ */
 +package ch.ethz.iks.concierge.framework;
 +
 +import java.io.File;
@@ -107,9 +111,9 @@ Index: src/main/java/ch/ethz/iks/concierge/framework/DexHelper.java
 +		catch (Exception e) {
 +			if (Framework.DEBUG_CLASSLOADING) {
 +				Framework.logger.log(LogService.LOG_INFO,
-+						"DexHelper.defineClass(" + dexName + ") failed."); //$NON-NLS-1$ //$NON-NLS-2$
++						"DexHelper.defineClass(" + dexName + ") failed.", e); //$NON-NLS-1$ //$NON-NLS-2$
++				e.printStackTrace(System.out);
 +			}
-+			e.printStackTrace(System.out);
 +			return null;
 +		}
 +	}
