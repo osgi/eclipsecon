@@ -1,13 +1,11 @@
 -Dch.ethz.iks.concierge.jars=file:/data/concierge/bundles
 -Dch.ethz.iks.concierge.log.enabled=true
 -Dch.ethz.iks.concierge.log.level=4
+-Dch.ethz.iks.concierge.debug.classloading=true 
 
 -init
 
--istart helloworld_1.0.0.jar
-#-istart event-admin-1.0_RC2.jar
-#-istart service-tracker-1.0_RC2.jar
 -istart shell-1.0_RC2.jar
-#-istart concierge_gui-1.0_RC2.jar
+-istart service-tracker-1.0_RC2.jar
+-istart helloworld_1.0.0.jar
 
-#-exit
