@@ -1,3 +1,7 @@
+/* 
+ * © Copyright 2008 IBM Corp.  All rights reserved.  
+ * This source code is made available under the terms of the Eclipse Public License, v1.0. 
+ */
 package test;
 
 import org.osgi.framework.BundleActivator;
