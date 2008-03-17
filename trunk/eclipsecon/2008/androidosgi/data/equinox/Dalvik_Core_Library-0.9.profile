@@ -29,5 +29,6 @@ org.osgi.framework.bootdelegation = \
  org.xml.*
 org.osgi.framework.executionenvironment = \
  OSGi/Minimum-1.0,\
- OSGi/Minimum-1.1
+ OSGi/Minimum-1.1,\
+ CDC-1.0/Foundation-1.0
 osgi.java.profile.name = Dalvik_Core_Library-0.9
