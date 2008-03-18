@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ConfigAdminCommandProvider
+Bundle-SymbolicName: test.commandprovider.configadmin
+Bundle-Version: 1.0.0
+Import-Package: org.eclipse.osgi.framework.console;version="1.0.0",
+ org.osgi.framework;version="1.2.0",
+ org.osgi.service.cm;version="1.2.0"
+Service-Component: ConfigCommands.xml
